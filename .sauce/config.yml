@@ -7,18 +7,18 @@ sauce:
   metadata:
     tags:
       - e2e
-      - release team
-      - other tag
-    build: Release $CI_COMMIT_SHORT_SHA
+      - demo
+    build: Demo Run $GITHUB_RUN_NUMBER
 espresso:
   app: ./apps/mda-1.0.10-12.apk
   testApp: ./apps/mda-androidTest-1.0.10-12.apk
 suites:
-  - name: "saucy barista on Android Emulator"
-    emulators:
-      - name: "Android GoogleAPI Emulator"
-        platformVersions:
-          - "15.0"
+  - name: "Demo app on real Android devices"
+    devices:
+      - name: "Samsung.*"
+      - name: "Google Pixel.*"
+    testOptions:
+      numShards: 5
 artifacts:
   download:
     when: always
@@ -29,3 +29,4 @@ artifacts:
 reporters:
   spotlight: # Prints an overview of failed or otherwise interesting jobs.
     enabled: true
+
