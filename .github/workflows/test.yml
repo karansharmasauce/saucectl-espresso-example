@@ -1,6 +1,7 @@
 name: saucectl espresso tests
 
 on:
+  workflow_dispatch:
   pull_request:
   push:
     branches:
@@ -22,15 +23,3 @@ jobs:
         uses: saucelabs/saucectl-run-action@v4
         with:
           concurrency: 10
-
-  cucumber-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Run saucectl
-        uses: saucelabs/saucectl-run-action@v4
-        with:
-          concurrency: 10
-          working-directory: ./examples/cucumber
