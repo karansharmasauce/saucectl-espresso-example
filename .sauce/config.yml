@@ -16,7 +16,7 @@ suites:
   - name: "Demo app on real Android devices"
     devices:
       - name: "Samsung.*"
-      - name: "Google Pixel [6-9].*"
+      - name: "Samsung.*"
     testOptions:
       numShards: 5
 artifacts:
