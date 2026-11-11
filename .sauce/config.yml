@@ -21,6 +21,18 @@ suites:
         platformVersion: "15"
     testOptions:
       numShards: 5
+    appSettings:
+      instrumentation:
+        networkCapture: true
+        vitals: true
+  - name: "Checkout flow on Pixel"
+    devices:
+      - name: "Google Pixel 10.*"
+        platformVersion: "17"
+    appSettings:
+      instrumentation:
+        networkCapture: true
+        vitals: true
 artifacts:
   download:
     when: always
@@ -31,5 +43,6 @@ artifacts:
 reporters:
   spotlight: # Prints an overview of failed or otherwise interesting jobs.
     enabled: true
+
 
 
