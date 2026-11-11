@@ -16,7 +16,7 @@ suites:
   - name: "Demo app on real Android devices"
     devices:
       - name: "Samsung.*"
-      - name: "Google Pixel.*"
+      - name: "Google Pixel [6-9].*"
     testOptions:
       numShards: 5
 artifacts:
@@ -29,4 +29,5 @@ artifacts:
 reporters:
   spotlight: # Prints an overview of failed or otherwise interesting jobs.
     enabled: true
+
 
