@@ -15,8 +15,10 @@ espresso:
 suites:
   - name: "Demo app on real Android devices"
     devices:
-      - name: "Samsung.*"
-      - name: "Samsung.*"
+      - name: "Samsung Galaxy S.*"
+        platformVersion: "16"
+      - name: "Samsung Galaxy S.*"
+        platformVersion: "15"
     testOptions:
       numShards: 5
 artifacts:
