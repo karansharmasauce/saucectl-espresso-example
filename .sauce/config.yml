@@ -20,7 +20,7 @@ suites:
       - name: "Samsung Galaxy S.*"
         platformVersion: "15"
     testOptions:
-      numShards: 5
+      numShards: 4
 artifacts:
   download:
     when: always
