@@ -14,9 +14,6 @@ espresso:
   testApp: ./apps/mda-androidTest-1.0.10-12.apk
 suites:
   - name: "Demo app on real Android devices"
-    testOptions:
-      notClass:
-        - com.saucelabs.mydemoapp.android.view.activities.DashboardToCheckout#dashboardProductTest
     appSettings:
       instrumentation:
         networkCapture: true
@@ -27,17 +24,17 @@ suites:
       - name: "Samsung Galaxy S2[2-6].*"
         platformVersion: "16"
       - name: "Samsung Galaxy S2[2-6].*"
-        platformVersion: "16"
-      - name: "Samsung Galaxy S2[2-6].*"
-        platformVersion: "16"
-      - name: "Samsung Galaxy S2[2-6].*"
         platformVersion: "15"
       - name: "Samsung Galaxy S2[2-6].*"
         platformVersion: "15"
-      - name: "Samsung Galaxy S2[2-6].*"
-        platformVersion: "15"
-      - name: "Samsung Galaxy S2[2-6].*"
-        platformVersion: "15"
+  - name: "Checkout flow on latest Android"
+    appSettings:
+      instrumentation:
+        networkCapture: true
+        vitals: true
+    devices:
+      - name: "Google Pixel 10.*"
+        platformVersion: "17"
 artifacts:
   download:
     when: always
