@@ -18,9 +18,19 @@ suites:
       - name: "Samsung Galaxy S.*"
         platformVersion: "16"
       - name: "Samsung Galaxy S.*"
+        platformVersion: "16"
+      - name: "Samsung Galaxy S.*"
+        platformVersion: "16"
+      - name: "Samsung Galaxy S.*"
+        platformVersion: "16"
+      - name: "Samsung Galaxy S.*"
         platformVersion: "15"
-    testOptions:
-      numShards: 4
+      - name: "Samsung Galaxy S.*"
+        platformVersion: "15"
+      - name: "Samsung Galaxy S.*"
+        platformVersion: "15"
+      - name: "Samsung Galaxy S.*"
+        platformVersion: "15"
 artifacts:
   download:
     when: always
