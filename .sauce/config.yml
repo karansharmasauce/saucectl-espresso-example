@@ -17,6 +17,10 @@ suites:
     testOptions:
       notClass:
         - com.saucelabs.mydemoapp.android.view.activities.DashboardToCheckout#dashboardProductTest
+    appSettings:
+      instrumentation:
+        networkCapture: true
+        vitals: true
     devices:
       - name: "Samsung Galaxy S2[2-6].*"
         platformVersion: "16"
